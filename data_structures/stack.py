@@ -52,13 +52,15 @@ class Stack(object):
             raise StackEmptyError()
         return self.__stack[-1]
 
-    def is_empty(self) -> bool:
+    @property
+    def empty(self) -> bool:
         """
         Check if the stack is currently empty.
         :return: bool
         """
         return not len(self.__stack)
 
+    @property
     def size(self) -> int:
         """
         Get current size of the stack.
