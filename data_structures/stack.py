@@ -29,7 +29,7 @@ class Stack(object):
         :param element: Any new element
         :return: None
         """
-        if self.size() > self.__max_size:
+        if self.size > self.__max_size:
             raise StackOverflowError()
         self.__stack.append(element)
 
@@ -38,7 +38,7 @@ class Stack(object):
         Pop the top element.
         :return: None
         """
-        if self.is_empty():
+        if self.empty:
             raise StackEmptyError()
         self.__stack.pop()
 
@@ -48,7 +48,7 @@ class Stack(object):
         Get the top element.
         :return: Any
         """
-        if self.is_empty():
+        if self.empty:
             raise StackEmptyError()
         return self.__stack[-1]
 
